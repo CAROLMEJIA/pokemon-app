@@ -34,7 +34,6 @@ export const  getPokemons = () =>{
          return fetch(`${process.env.BACK_URL}/pokemons`)
         .then(r=>r.json())
         .then(data =>{
-            console.log(data)
             dispatch(loading(false));
             return dispatch({
                 type: GET_POKEMONS,
