@@ -31,7 +31,7 @@ export const loading = (value) =>{
 export const  getPokemons = () =>{
     return async function(dispatch){
          dispatch(loading(true));
-         return fetch(`${process.env.BACK_URL}/pokemons`)
+         return fetch(`https://pokemon-back-deploy.herokuapp.com/pokemons`)
         .then(r=>r.json())
         .then(data =>{
             dispatch(loading(false));
