@@ -73,7 +73,6 @@ export const filterDbApi =(value) =>{
 export function findPokemon(name){
     return async function(dispatch){
         dispatch(loading(true));
-       
         return fetch(`${process.env.BACK_URL}/pokemons?name=${name}`)
         .then(r => r.json())
         .then(data =>{
@@ -91,7 +90,6 @@ export const getDetail = (id)=>{
     return async function(dispatch){
         dispatch(loading(true));
         let detail = await axios.get(`${process.env.BACK_URL}/pokemons/${id}`)
-        
         dispatch(loading(false));
         return dispatch({
             type: GET_DETAIL,
@@ -122,7 +120,6 @@ export function deleteFilters(){
 
 export function createPokemon(info){
     return async function(dispatch){
-        console.log(info);
         let pokemon = await axios.post(`${process.env.BACK_URL}/pokemons`, info)
         return dispatch({
             type: CREATE_POKEMON,
