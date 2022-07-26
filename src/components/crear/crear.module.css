@@ -1,0 +1,123 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+   
+}
+
+.formulario{
+    width: 40%;
+    border: 0px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 40px;
+    padding-top: 0px;
+    background-image: linear-gradient(to right,rgb(77, 75, 75), rgb(156, 198, 211),  rgb(148, 170, 177),rgb(29, 28, 28));
+    box-shadow:  rgb(46, 46, 46) 5px 4px 7px 1px;
+    
+}
+
+
+.selectTypes{
+    width: 50%;
+    border-radius: 7px;
+    background-color: black;
+    color:  rgb(130, 193, 212);
+    font-weight: bold;
+    border: none;
+    height: 3.5vh;
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+    padding: 2px;
+}
+
+h2{
+    border-bottom: 2px solid black;
+    font-size: 30px;
+}
+
+.link{
+    border: 0px solid black;
+    width: 5%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.flechaImg{
+    width: 100%;
+}
+
+.contSelect{
+    width: 50%;
+    border: 0px solid black;
+    margin-bottom: 7px;
+}
+
+.boton{
+    width: 13%;
+    background-color: black;
+    color:  rgb(130, 193, 212);
+    font-weight: bold;
+    border: none;
+    height: 3.5vh;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input{
+    margin: 10px;
+    width: 45%;
+    border-radius: 7px;
+    background-color:  rgb(130, 193, 212);
+    border: rgb(65, 63, 63) 1px solid;
+    color:  black;
+    text-align: center;
+    font-weight: bold;
+    height: 3vh;
+    font-size: 14px; 
+}
+
+@media screen and (max-width:800px){
+
+.contenedor{
+    width: 100%;
+}
+.formulario{
+    width: 90%;
+    margin-top: 10%;
+   
+}
+
+.flechaImg{
+    width: 150%;
+    margin-bottom: 0px;
+}
+
+input{
+    margin: 10px;
+    width: 60%;
+    height: 2vh;
+    font-size: 14px; 
+}
+
+.boton{
+    width: 17%;
+    height: 2.5vh;
+}
+
+.selectTypes{
+    height: 2.5vh;
+}
+
+
+}
+

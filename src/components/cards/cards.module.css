@@ -1,0 +1,24 @@
+.contenedorGeneral{
+    position: relative;
+}
+
+.contPokemons{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 90px;
+}
+
+@media screen and (max-width:500px){
+
+     
+
+    .contPokemons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+       
+     }
+}

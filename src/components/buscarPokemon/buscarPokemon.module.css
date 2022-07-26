@@ -1,0 +1,61 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right:black 2px solid;
+    width: 20%;
+}
+
+.contBotones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: blue 0px solid;
+}
+
+.p{
+    border-bottom: 1px black solid;
+    margin: 0px;
+    font-weight: bold;
+
+}
+
+.boton{
+    padding: 3px;
+    background-color: black;
+    color:  rgb(130, 193, 212);
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    margin: 3px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:900px){
+
+    .contenedor{
+        width: 100%;
+        border-bottom: solid 2px  rgb(130, 193, 212);
+        border-right: black 0px solid;
+        border-left: black 0px solid;
+        padding-top: 3%;
+        padding-bottom: 4%;
+    }
+
+    .boton{
+        background-image: url("../../img/fondo-opacidad.png");
+        color:  rgb(130, 193, 212);
+        border: 2px solid  rgb(130, 193, 212);
+        width: 50%;
+        margin: 3px;
+        padding: 5px;
+        font-weight: bold;
+    }
+    .inputName{
+        height: 2.8vh;
+    }
+    
+}
