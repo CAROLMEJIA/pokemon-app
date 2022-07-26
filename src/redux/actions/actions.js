@@ -16,7 +16,7 @@ import {
 } from "../types/types.js";
 
 
-
+const URL = "https://pokemon-back-deploy.herokuapp.com"
 
 
 export const loading = (value) =>{
@@ -31,7 +31,7 @@ export const loading = (value) =>{
 export const  getPokemons = () =>{
     return async function(dispatch){
          dispatch(loading(true));
-         return fetch(`${process.env.BACK_URL}/pokemons`)
+         return fetch(`${URL}/pokemons`)
         .then(r=>r.json())
         .then(data =>{
             dispatch(loading(false));
@@ -46,7 +46,7 @@ export const  getPokemons = () =>{
 
 export function getTypes(){
     return async function(dispatch){
-        let types = await axios.get(`${process.env.BACK_URL}/types`)
+        let types = await axios.get(`${URL}/types`)
         return dispatch({
             type: GET_TYPES,
             payload: types.data
@@ -73,7 +73,7 @@ export const filterDbApi =(value) =>{
 export function findPokemon(name){
     return async function(dispatch){
         dispatch(loading(true));
-        return fetch(`${process.env.BACK_URL}/pokemons?name=${name}`)
+        return fetch(`${URL}/pokemons?name=${name}`)
         .then(r => r.json())
         .then(data =>{
            
@@ -89,7 +89,7 @@ export function findPokemon(name){
 export const getDetail = (id)=>{
     return async function(dispatch){
         dispatch(loading(true));
-        let detail = await axios.get(`${process.env.BACK_URL}/pokemons/${id}`)
+        let detail = await axios.get(`${URL}/pokemons/${id}`)
         dispatch(loading(false));
         return dispatch({
             type: GET_DETAIL,
@@ -120,7 +120,7 @@ export function deleteFilters(){
 
 export function createPokemon(info){
     return async function(dispatch){
-        let pokemon = await axios.post(`${process.env.BACK_URL}/pokemons`, info)
+        let pokemon = await axios.post(`${URL}/pokemons`, info)
         return dispatch({
             type: CREATE_POKEMON,
             payload: pokemon
@@ -131,7 +131,7 @@ export function createPokemon(info){
 export function deletePokemon(id){
    return async function(dispatch){
        dispatch(loading(true));
-       let deletePoke = await axios.delete(`${process.env.BACK_URL}/pokemons/${id}`)
+       let deletePoke = await axios.delete(`${URL}/pokemons/${id}`)
        dispatch(loading(false));
        return dispatch({
            type: DELETE_POKEMON,
